@@ -1,0 +1,152 @@
+/* ============================================================
+   YOUR STYLES
+
+   This file loads AFTER simple.css in the HTML, so anything you
+   write here wins. That order is called the cascade. If you put
+   this link above simple.css instead, none of it will work.
+
+   Simple.css already styles every HTML element. You are not
+   starting from nothing. You are adjusting something.
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   1. FONTS
+
+   The @import below pulls two typefaces from Google Fonts.
+   To change them:
+     1. go to fonts.google.com or fontshare.com
+     2. pick a font, copy the @import they give you
+     3. replace the line below
+     4. put the font's name in --sans-font or --heading-font
+
+   @import must be the first thing in the file. Always.
+   ------------------------------------------------------------ */
+
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides&family=Monoton&family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap"  );
+
+
+/* ------------------------------------------------------------
+   2. VARIABLES
+
+   These names come from simple.css. Changing a value here
+   changes it everywhere on every page at once.
+
+   Change all of them. The point is that your site does not
+   look like the starter.
+   ------------------------------------------------------------ */
+
+:root, ::backdrop {
+
+  /* --- type --- */
+  --sans-font: 'Valley Sans', system-ui, sans-serif;   /* body text */
+  --heading-font: 'Monoton' ; /* headings */
+  --mono-font: ui-monospace, Menlo, Consolas, monospace;
+
+  /* --- color --- */
+  --bg:          #ffffff;   /* page background */
+  --accent-bg:   #cee8fa;   /* boxes, table headers, quote backgrounds */
+  --text:        #38240a;   /* body text */
+  --text-light:  #a16543;   /* captions and secondary text */
+  --border:      #D7D4CC;   /* rules and outlines */
+  --accent:      #834f21;   /* links */
+  --accent-hover:#2E8268;
+  --accent-text: var(--bg); /* text sitting on top of accent */
+  --code:        #9A2A5C;
+  --marked:      #F5E06B;   /* highlighter color for <mark> */
+
+  --standard-border-radius: 99px;
+}
+
+
+/* ------------------------------------------------------------
+   3. ADJUSTMENTS
+
+   Simple.css does not have a heading font variable, so this
+   applies mine. Delete it if you only want one typeface.
+   ------------------------------------------------------------ */
+
+h1, h2, h3, h4 {
+  font-family: var(--heading-font);
+  font-weight: 400;
+  letter-spacing: .05em;
+}
+
+h1 { font-size: 4rem; line-height: 1.1; }
+h2 { font-size: 2.6rem; line-height: 1.1; }
+h3 { font-size: 2rem; line-height: 1.1; }
+/* Dates and captions */
+time { color: var(--text-light); }
+
+figcaption { font-size: 0.9rem; }
+
+/* Simple.css centers the header. This left-aligns it. */
+header { text-align: left; padding-bottom: 1.5rem; }
+header > nav { margin-top: 0.5rem; }
+
+
+/* ------------------------------------------------------------
+   4. YOUR CSS
+
+   Write below here so you can always find your own work.
+   ------------------------------------------------------------ */
+body {
+   border-width: 10px;
+   border-style: solid;
+   border-color: var(--border);
+}
+article {
+  padding: 80px;
+}
+article {
+  min-width: 900px;
+  margin: auto
+
+}
+.entries-box {
+  background: #cfe8f7;
+  border: 2px solid var(--border);
+  border-radius: 32px;
+  max-width: 820px;
+  margin: 1.5rem auto;
+  padding: 1rem 1.5rem 1.25rem;
+  box-sizing: border-box;
+}
+
+.entries-box h3 {
+  margin: 0 0 1rem;
+  font-family: var(--sans-font);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.entries-box ul {
+  background: #f3f0eb;
+  border-radius: 28px;
+  list-style-position: outside;
+  margin: 0;
+  padding: 2rem 1.5rem 1rem 3rem;
+  min-height: 380px;
+}
+
+.entries-box li {
+  margin: 0 0 2rem 0;
+  padding-left: 0.5rem;
+}
+
+.entries-box li:last-child {
+  margin-bottom: 0;
+}
+
+.entries-box a {
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.entries-box time {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 1rem;
+}

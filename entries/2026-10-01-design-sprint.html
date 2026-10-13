@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Riverton 311: a streetlight report in four screens — Norah</title>
+<meta name="description" content="Notes from the UT330 design sprint: four Figma screens for reporting and tracking a broken streetlight.">
+
+<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+<link rel="stylesheet" href="../css/custom.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Norah</h1>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="index.html" aria-current="page">Log</a>
+    <a href="../project.html">Project</a>
+    <a href="../about.html">About</a>
+  </nav>
+</header>
+
+<main>
+
+<article>
+
+  <h2>Riverton 311: a streetlight report in four screens</h2>
+  <p><time datetime="2026-10-12">October 12, 2026</time> · Design sprint</p>
+
+  <p>
+    This was the design sprint. My team picked Riverton 311, an app from the
+    City of Riverton for reporting a broken streetlight and checking on it
+    later. We built four screens in Figma with the Material 3 kit, one screen
+    each. Our roles changed every round, and between rounds we showed the work
+    to other teams and to our instructor and changed it based on what they said.
+  </p>
+
+
+  <h3>What the brief told us</h3>
+
+  <p>The brief listed what residents had already told the city:</p>
+
+  <ul>
+    <li>They want proof the report went through.</li>
+    <li>They want to know roughly when the light will be fixed.</li>
+    <li>They check back and want a clear status.</li>
+    <li>The same light gets reported several times, which slows the queue.</li>
+  </ul>
+
+  <p>The city only asked for one thing: a ticket number on every report.</p>
+
+
+  <h3>What we spent the time on</h3>
+
+  <p>
+    Most of our talking was about status. Someone who checks back wants to know
+    where their report is, so we decided on a progress bar that shows which
+    stage the ticket is in during the repair, and a clear place to find updates.
+  </p>
+
+  <p>
+    The other thing was making four separate screens feel like one app. Each of
+    us built one, so every dimension of every component and frame had to line up
+    with the others, and the flow from one frame to the next had to feel
+    natural. We also spent a lot of time on the smaller choices: font size,
+    colors, and how big the app title at the top should be.
+  </p>
+
+  <figure>
+    <img src="../images/teamsprint.png"
+         width="1200" height="600"
+         alt="Four phone screens side by side on a lavender background. Each has the Riverton 311 title bar at the top and a bottom bar with Report, Tickets, and Updates. From the left: an address field and map with a photo upload, two ticket confirmations with a photo of a light pole, a list of Received, Scheduled, and Fixed, and a notice about an existing report above a progress bar.">
+    <figcaption>
+      The four frames side by side. Frames 1 to 3 are Daniel, Kurt, and Lana's.
+      Frame 4 is mine.
+    </figcaption>
+  </figure>
+
+
+  <h3>The screens</h3>
+
+  <dl>
+    <dt>Frame 1: Enter streetlight address</dt>
+    <dd>
+      Type an address or choose on the map, describe the problem, and attach or
+      take a photo of the light pole. The photo is required.
+    </dd>
+
+    <dt>Frame 2: Ticket confirmation</dt>
+    <dd>
+      Shows the ticket number and where the light is, so people can see the
+      report went through.
+    </dd>
+
+    <dt>Frame 3: Ticket status</dt>
+    <dd>
+      The three stages a report goes through: Received, Scheduled, and Fixed.
+    </dd>
+
+    <dt>Frame 4: Ticket status, existing report</dt>
+    <dd>
+      What happens when the light someone picked has already been reported. A
+      notice says so, with a way to follow the existing ticket, and the progress
+      bar shows where that repair is.
+    </dd>
+
+    <dt>Frame 5: Language settings (added in Phase 3)</dt>
+    <dd>
+      Choose a different language from a list, with a search field. The earlier
+      screens got a button that leads here.
+    </dd>
+  </dl>
+
+
+  <h3>The three statuses</h3>
+
+  <table>
+    <caption>What each status means on Frame 3</caption>
+    <thead>
+      <tr>
+        <th scope="col">Status</th>
+        <th scope="col">What it tells the resident</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Received</th>
+        <td>The report as it was first submitted.</td>
+      </tr>
+      <tr>
+        <th scope="row">Scheduled</th>
+        <td>The report has been reviewed and scheduled for repair.</td>
+      </tr>
+      <tr>
+        <th scope="row">Fixed</th>
+        <td>The repair is finished and the issue is resolved.</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h3>What we were aiming for</h3>
+
+  <ol>
+    <li>Make the status easy to see at a glance.</li>
+    <li>Give people proof their report went through, and an easy way to follow it. Point repeat reports to the ticket that already exists.</li>
+    <li>Keep every frame consistent so the whole thing feels like one flow.</li>
+  </ol>
+
+
+  <h3>What changed between rounds</h3>
+
+  <h4>Phase 1</h4>
+
+  <p>
+    The first version was rough on purpose. We wanted the basic screens and the
+    overall flow down before worrying about making everything perfect. We
+    worked out the main steps a user would go through and made something we
+    could test and improve.
+  </p>
+
+  <h4>Phase 2</h4>
+
+  <p>
+    The biggest change was Frame 1. We made it mandatory to attach a photo of
+    the light pole, and let the user either pick one from their camera roll or
+    take a photo right then.
+  </p>
+
+  <p>
+    We also used the feedback on the other frames. We made the navigation bars
+    at the top and bottom match across all four, and we gave Frame 3 the same
+    progress bar as Frame 4 and adjusted its visuals and layout.
+  </p>
+
+  <h4>Phase 3</h4>
+
+  <p>
+    One piece of feedback was to choose graphics for the Ticket Status page that
+    matched the rest of the design style. We also made the ticket confirmation
+    include the picture and the map.
+  </p>
+
+  <p>
+    The new challenge was a screen for choosing a different language. We built
+    that, and added a button to the language options on the earlier screens.
+  </p>
+
+
+  <h3>My part</h3>
+
+  <p>
+    I stayed on Frame 4 the whole time. Figuring out the design system at the
+    beginning was the hard part for me, and using it in Figma was challenging at
+    first. Once I had it down, I was able to help my teammates with Figma too.
+  </p>
+
+
+  <h3>What went well</h3>
+
+  <p>
+    We were given a set of graphics, colors, and elements to use, which made it
+    easy to keep the four frames consistent. I also found it easy to work with
+    my team. We split up the responsibilities but helped each other instead of
+    working completely separately, and we made decisions together. Figma made
+    that easy too.
+  </p>
+
+
+  <h3>What could have been better</h3>
+
+  <p>
+    The design system made some steps easier but made the design choices less
+    creative, and it was hard to use other fonts and styles. Getting started was
+    also overwhelming, and figuring out how to lay out each frame's content was
+    challenging at the beginning.
+  </p>
+
+
+  <p><a href="index.html">Back to the log</a></p>
+
+</article>
+
+</main>
+
+<footer>
+  <p>Norah. UT330, Taubman College, Fall 2026.</p>
+</footer>
+
+</body>
+</html>
